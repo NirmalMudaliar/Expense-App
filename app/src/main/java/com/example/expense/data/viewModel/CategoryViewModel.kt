@@ -37,6 +37,7 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
+//    hello
     fun deleteSingleCategory(category: Category) = viewModelScope.launch {
         categoryRepository.deleteSingleCategory(category)
     }
