@@ -29,11 +29,11 @@
             app:destination="@id/homeFragment"
             app:popUpTo="@id/my_nav" />
         <action
-            android:id="@+id/action_settingsFragment_to_addCategoryFragment"
-            app:destination="@id/addCategoryFragment" />
+            android:id="@+id/action_settingsFragment_to_manageCategoryFragment"
+            app:destination="@id/manageCategoryFragment" />
         <action
-            android:id="@+id/action_settingsFragment_to_addPaymentFragment"
-            app:destination="@id/addPaymentFragment" />
+            android:id="@+id/action_settingsFragment_to_managePaymentFragment"
+            app:destination="@id/managePaymentFragment" />
     </fragment>
     <dialog
         android:id="@+id/addCategoryFragment"
@@ -41,8 +41,10 @@
         android:label="fragment_add_category"
         tools:layout="@layout/fragment_add_category">
         <action
-            android:id="@+id/action_addCategoryFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            android:id="@+id/action_addCategoryFragment_to_manageCategoryFragment"
+            app:destination="@id/manageCategoryFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
     </dialog>
     <dialog
         android:id="@+id/addPaymentFragment"
@@ -50,5 +52,68 @@
         android:label="fragment_add_payment"
         tools:layout="@layout/fragment_add_payment" >
 
+        <action
+            android:id="@+id/action_addPaymentFragment_to_managePaymentFragment"
+            app:destination="@id/managePaymentFragment"
+            app:popUpTo="@id/homeFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/manageCategoryFragment"
+        android:name="com.example.expense.ui.fragments.ManageCategoryFragment"
+        android:label="fragment_manage_category"
+        tools:layout="@layout/fragment_manage_category" >
+        <action
+            android:id="@+id/action_manageCategoryFragment_to_addCategoryFragment"
+            app:destination="@id/addCategoryFragment" />
+        <action
+            android:id="@+id/action_manageCategoryFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_manageCategoryFragment_to_updateCategoryFragment"
+            app:destination="@id/updateCategoryFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/updateCategoryFragment"
+        android:name="com.example.expense.ui.fragments.UpdateCategoryFragment"
+        android:label="fragment_update_category"
+        tools:layout="@layout/fragment_update_category" >
+        <action
+            android:id="@+id/action_updateCategoryFragment_to_manageCategoryFragment"
+            app:destination="@id/manageCategoryFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="currentCategory"
+            app:argType="com.example.expense.data.db.entities.Category" />
+    </dialog>
+    <fragment
+        android:id="@+id/managePaymentFragment"
+        android:name="com.example.expense.ui.fragments.ManagePaymentFragment"
+        android:label="fragment_manage_payment"
+        tools:layout="@layout/fragment_manage_payment" >
+        <action
+            android:id="@+id/action_managePaymentFragment_to_addPaymentFragment"
+            app:destination="@id/addPaymentFragment" />
+        <action
+            android:id="@+id/action_managePaymentFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_managePaymentFragment_to_updatePaymentFragment"
+            app:destination="@id/updatePaymentFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/updatePaymentFragment"
+        android:name="com.example.expense.ui.fragments.UpdatePaymentFragment"
+        android:label="fragment_update_payment"
+        tools:layout="@layout/fragment_update_payment" >
+        <action
+            android:id="@+id/action_updatePaymentFragment_to_managePaymentFragment"
+            app:destination="@id/managePaymentFragment"
+            app:popUpTo="@id/homeFragment" />
+        <argument
+            android:name="currentPayment"
+            app:argType="com.example.expense.data.db.entities.Payment" />
     </dialog>
 </navigation>

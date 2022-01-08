@@ -12,6 +12,10 @@ class PaymentRepository(private val paymentDao: PaymentDao) {
         paymentDao.insertPayment(payment)
     }
 
+    suspend fun updatePayment(payment: Payment) {
+        paymentDao.updatePayment(payment)
+    }
+
     suspend fun deleteSinglePayment(payment: Payment) {
         paymentDao.deleteSinglePayment(payment)
     }

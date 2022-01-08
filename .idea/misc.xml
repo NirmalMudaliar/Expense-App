@@ -4,22 +4,31 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable-anydpi/ic_add.xml" value="0.17552083333333332" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable-anydpi/ic_back.xml" value="0.1574074074074074" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable-anydpi/ic_view.xml" value="0.2755208333333333" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable/border.xml" value="0.17552083333333332" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable/bottom_sheet_style.xml" value="0.2755208333333333" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable/button_corner_radius.xml" value="0.2755208333333333" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/drawable/ic_add.xml" value="0.17552083333333332" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/activity_main.xml" value="0.11322463768115942" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/activity_splash_screen.xml" value="1.0" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/activity_splash_screen2.xml" value="0.10733695652173914" />
-        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_add_category.xml" value="0.3303964757709251" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/custom_row_manage_category.xml" value="0.3333333333333333" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/custom_row_master.xml" value="0.1" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_add_category.xml" value="0.1" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_add_payment.xml" value="0.22333333333333336" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_first.xml" value="0.1" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_manage_category.xml" value="0.22333333333333336" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_manage_payment.xml" value="0.11" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_second.xml" value="0.1" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_settings.xml" value="0.22333333333333336" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_stats.xml" value="0.22" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_update_category.xml" value="0.22333333333333336" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/layout/fragment_update_payment.xml" value="0.159375" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/menu/bottom_nav_bar_menu.xml" value="0.11018518518518519" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/menu/bottom_nav_mar_menu.xml" value="0.175" />
+        <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/menu/manage_payment_menu.xml" value="0.175" />
         <entry key="..\:/Mydata/Android_Projects/Expense/app/src/main/res/xml/root_preferences.xml" value="0.25" />
       </map>
     </option>

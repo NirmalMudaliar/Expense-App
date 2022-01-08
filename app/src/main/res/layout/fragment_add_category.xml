@@ -8,20 +8,20 @@
     android:paddingBottom="12dp"
     android:paddingEnd="12dp"
     android:paddingStart="12sp"
+
     android:orientation="vertical"
     >
 
     <!-- TODO: Update blank fragment layout -->
 
     <ImageView
-        android:id="@+id/imageView2"
+
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:src="@drawable/ic_view" />
 
     <TextView
-        android:id="@+id/lbl_addCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17sp"

@@ -10,30 +10,45 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.fragment.findNavController
 import com.example.expense.R
+import com.example.expense.databinding.FragmentStatsBinding
 
 
 class StatsFragment : Fragment() {
 
+    // Setup View Binding
+    private var _binding: FragmentStatsBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_stats, container, false)
 
-        val tbStats = view.findViewById<Toolbar>(R.id.tb_stats)
-        if(activity is AppCompatActivity) {
-            (activity as AppCompatActivity).setSupportActionBar(tbStats)
-        }
+        // Setup View Binding
+        _binding = FragmentStatsBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-        val backBtnStats = view.findViewById<ImageView>(R.id.backBtnStats)
-        backBtnStats.setOnClickListener {
-            findNavController().navigate(R.id.action_statsFragment_to_homeFragment)
-        }
+        // Setup Toolbar
+        setupActionBar()
+
+        // Listener for back button
+        backButton()
 
         return view
     }
 
+    private fun backButton() {
+        val backBtnStats = binding.backBtnStats
+        backBtnStats.setOnClickListener {
+            findNavController().navigate(R.id.action_statsFragment_to_homeFragment)
+        }
+    }
+
+    private fun setupActionBar() {
+        val tbStats = binding.tbStats
+        if(activity is AppCompatActivity) {
+            (activity as AppCompatActivity).setSupportActionBar(tbStats)
+        }
+    }
 
 }

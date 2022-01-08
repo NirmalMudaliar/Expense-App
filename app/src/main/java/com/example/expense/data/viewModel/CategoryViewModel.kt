@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class CategoryViewModel(application: Application) : AndroidViewModel(application){
 
-    private val getAllCategory: LiveData<List<Category>>
+    val getAllCategory: LiveData<List<Category>>
     private val categoryRepository: CategoryRepository
 
     init {
@@ -31,6 +31,11 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
         }
 
     }
+    fun updateCategory(category: Category) {
+        viewModelScope.launch(Dispatchers.IO) {
+            categoryRepository.updateCategory(category)
+        }
+    }
 
     fun deleteSingleCategory(category: Category) = viewModelScope.launch {
         categoryRepository.deleteSingleCategory(category)
@@ -38,6 +43,10 @@ class CategoryViewModel(application: Application) : AndroidViewModel(application
 
     fun deleteAllCategory() = viewModelScope.launch {
         categoryRepository.deleteAllCategory()
+    }
+
+    fun searchPayment(searchQuery: String): LiveData<List<Category>> {
+        return categoryRepository.searchPayment(searchQuery).asLiveData()
     }
 
 }

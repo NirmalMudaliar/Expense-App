@@ -23,7 +23,7 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         // Setup View Binding
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
@@ -32,7 +32,6 @@ class SettingsFragment : Fragment() {
         //Setup Action bar
         setupActionBar()
 
-        val cvAddPayment = view?.findViewById<CardView>(R.id.id_cv_addPayment)
 
         // Listener for back button
         backButton()
@@ -62,13 +61,13 @@ class SettingsFragment : Fragment() {
 
     private fun onAddCategoryClick() {
         binding.idCvAddCategory.setOnClickListener {
-            findNavController().navigate(R.id.action_settingsFragment_to_addCategoryFragment)
+            findNavController().navigate(R.id.action_settingsFragment_to_manageCategoryFragment)
         }
     }
 
     private fun onAddPaymentClick() {
         binding.idCvAddPayment.setOnClickListener {
-            findNavController().navigate(R.id.action_settingsFragment_to_addPaymentFragment)
+            findNavController().navigate(R.id.action_settingsFragment_to_managePaymentFragment)
         }
     }
 

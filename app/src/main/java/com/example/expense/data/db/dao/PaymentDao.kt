@@ -10,6 +10,9 @@ interface PaymentDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertPayment(payment: Payment)
 
+    @Update
+    suspend fun updatePayment(payment: Payment)
+
     @Delete
     suspend fun deleteSinglePayment(payment: Payment)
 

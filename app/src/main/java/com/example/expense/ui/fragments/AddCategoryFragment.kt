@@ -28,7 +28,6 @@ class AddCategoryFragment : BottomSheetDialogFragment() {
 
     private lateinit var categoryViewModel: CategoryViewModel
 
-   // private val edtCategory = view?.findViewById<TextInputLayout>(R.id.id_edt_tie_category)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,7 +47,6 @@ class AddCategoryFragment : BottomSheetDialogFragment() {
     private fun onSubmitClick() {
         binding.idBtnAddCategory.setOnClickListener {
             insertCategoryToDatabase()
-
         }
 
     }
@@ -60,6 +58,7 @@ class AddCategoryFragment : BottomSheetDialogFragment() {
         categoryViewModel.insertCategory(category)
         Log.d("NEW CATEGORY -> ", dataCategory)
         Toast.makeText(requireContext(), "Successfully added to database", Toast.LENGTH_LONG).show()
+        binding.idEdtTieCategory.setText("")
     }
 
     override fun onDestroyView() {

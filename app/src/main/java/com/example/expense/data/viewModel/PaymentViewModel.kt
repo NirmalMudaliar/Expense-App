@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 class PaymentViewModel(application: Application): AndroidViewModel(application) {
 
-    private val getAllPayment: LiveData<List<Payment>>
+    val getAllPayment: LiveData<List<Payment>>
     private val paymentRepository: PaymentRepository
 
     init {
@@ -25,7 +25,11 @@ class PaymentViewModel(application: Application): AndroidViewModel(application) 
         paymentRepository.insertPayment(payment)
     }
 
-    suspend fun deleteSinglePayment(payment: Payment) = viewModelScope.launch(Dispatchers.IO) {
+    fun updatePayment(payment: Payment) = viewModelScope.launch(Dispatchers.IO) {
+        paymentRepository.updatePayment(payment)
+    }
+
+    fun deleteSinglePayment(payment: Payment) = viewModelScope.launch(Dispatchers.IO) {
         paymentRepository.deleteSinglePayment(payment)
     }
 

@@ -26,7 +26,7 @@
         android:contentDescription="TODO"
         android:text="Add Trans."
         app:rippleColor="@color/purple_700"
-        android:backgroundTint="#FF8772"
+        android:backgroundTint="@color/fb"
         app:icon="@drawable/ic_add"
         android:backgroundTintMode="add"
         app:layout_constraintBottom_toBottomOf="parent"
